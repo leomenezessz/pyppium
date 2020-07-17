@@ -1,0 +1,27 @@
+# Pycharm
+
+.idea
+venv
+
+# Apps
+
+tests/e2e/apps/app-debug.apk
+tests/e2e/apps/dummy.app
+
+# Poetry
+
+pyppium_wrapper.egg-info
+dist
+
+# Pytest Coverage
+
+.coverage
+htmlcov
+coverage.xml
+
+
+# Python
+
+__pycache__/
+
+
