@@ -1,8 +1,9 @@
 # Pyppium
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-[![codecov](https://codecov.io/gh/leomenezessz/pyppium-wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/leomenezessz/pyppium-wrapper)
+[![codecov](https://codecov.io/gh/leomenezessz/pyppium/branch/master/graph/badge.svg)](https://codecov.io/gh/leomenezessz/pyppium)
 [![Documentation Status](https://readthedocs.org/projects/pyppium/badge/?version=latest)](https://pyppium.readthedocs.io/en/latest/?badge=latest)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/leomenezessz/pyppium/blob/master/LICENSE)
 
 
 
