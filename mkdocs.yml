@@ -1,0 +1,7 @@
+site_name: Pyppium
+nav:
+  - 'index.md'
+  - 'installation.md'
+  - 'getting-started.md'
+theme: readthedocs
+
