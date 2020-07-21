@@ -6,6 +6,8 @@ import pytest
 from appium.webdriver import WebElement
 from assertpy import add_extension
 
+_CONF_FILE_PATH = abspath("./pyppium.yaml")
+
 
 @pytest.fixture
 def android_caps():
@@ -185,7 +187,22 @@ def expected_default_config():
 
 
 @pytest.fixture
-def set_user_configuration(request, expected_user_configuration):
+def yaml_conf(request):
+    def delete_yaml_file():
+        os.remove(_CONF_FILE_PATH)
+
+    request.addfinalizer(delete_yaml_file)
+
+    return write_to_yaml
+
+
+def write_to_yaml(content):
+    with open(_CONF_FILE_PATH, "x") as file:
+        file.write(content)
+
+
+@pytest.fixture
+def set_user_configuration(yaml_conf):
     config = """
             # Pyppium simple yaml config.
     
@@ -196,12 +213,20 @@ def set_user_configuration(request, expected_user_configuration):
           
             """
 
-    root_dir = abspath("./pyppium.yaml")
+    yaml_conf(config)
 
-    with open(root_dir, "x") as file:
-        file.write(config)
 
-    def delete_yaml_file():
-        os.remove(root_dir)
+@pytest.fixture
+def set_wrong_yaml_configuration(yaml_conf):
+    config = """
+            # Pyppium simple yaml config.
+            
+            {
+            driver
+              timeout45
+              appium_url "http://localhost:3333/wd/hub"
+              browserstack_ur "@hub-cloud.browserstack.com/wd/hub:8080"
 
-    request.addfinalizer(delete_yaml_file)
+            """
+
+    yaml_conf(config)

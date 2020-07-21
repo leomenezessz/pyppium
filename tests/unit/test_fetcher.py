@@ -3,7 +3,7 @@ import pytest
 from appium.webdriver import WebElement
 from assertpy import assert_that
 from pyppium import fetcher
-from pyppium.exception import InvalidPlatformException, InvalidLocator
+from pyppium.exception import InvalidPlatformException, InvalidLocatorException
 from pyppium.fetcher import Android, iOS
 
 
@@ -110,7 +110,7 @@ def test_should_raise_exception_to_invalid_platform_in_fetches(
 @pytest.mark.parametrize("platform", ["android", "ios"])
 def test_should_raise_exception_to_invalid_locator(platform):
     wrong_locator = "ID"
-    with pytest.raises(InvalidLocator) as e:
+    with pytest.raises(InvalidLocatorException) as e:
         fetcher._validate_fetch(wrong_locator, platform)
     assert_that(str(e.value)).is_equal_to(
         f"Invalid locator '{wrong_locator}' to {platform} platform."

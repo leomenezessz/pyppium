@@ -14,7 +14,7 @@ def _validate_fetch(locator, plat):
         locator not in _get_appium_locators()
         and locator not in _get_selenium_locators()
     ):
-        raise exception.InvalidLocator(
+        raise exception.InvalidLocatorException(
             f"Invalid locator '{locator}' to {plat} platform."
         )
 
