@@ -38,6 +38,7 @@ pytest-cov= "==2.10.0"
 codecov = "==2.1.7"
 mkdocs = "==1.1.2"
 tox = "==3.17.1"
+tox-gh-actions = "==0.1.1"
 
 
 [build-system]
