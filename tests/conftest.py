@@ -1,3 +1,4 @@
+import os
 from os.path import abspath
 from typing import List
 import appium
@@ -159,3 +160,48 @@ def platform_name(mocker, name):
 @pytest.fixture
 def mock_remote_connection(mocker):
     mocker.patch("appium.webdriver.Remote")
+
+
+@pytest.fixture
+def expected_user_configuration():
+    return {
+        "driver": {
+            "timeout": 45,
+            "appium_url": "http://localhost:3333/wd/hub",
+            "browserstack_url": "@hub-cloud.browserstack.com/wd/hub:8080",
+        }
+    }
+
+
+@pytest.fixture
+def expected_default_config():
+    return {
+        "driver": {
+            "timeout": 15,
+            "appium_url": "http://localhost:4723/wd/hub",
+            "browserstack_url": "@hub-cloud.browserstack.com/wd/hub",
+        }
+    }
+
+
+@pytest.fixture
+def set_user_configuration(request, expected_user_configuration):
+    config = """
+            # Pyppium simple yaml config.
+    
+            driver:
+              timeout: 45
+              appium_url: "http://localhost:3333/wd/hub"
+              browserstack_url: "@hub-cloud.browserstack.com/wd/hub:8080"
+          
+            """
+
+    root_dir = abspath("./pyppium.yaml")
+
+    with open(root_dir, "x") as file:
+        file.write(config)
+
+    def delete_yaml_file():
+        os.remove(root_dir)
+
+    request.addfinalizer(delete_yaml_file)

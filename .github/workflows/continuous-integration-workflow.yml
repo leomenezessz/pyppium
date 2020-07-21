@@ -42,7 +42,7 @@ jobs:
       with:
         python_version: ${{ matrix.python-version }}
         poetry_version: 1.0.9
-        args: run pytest --cov-report=xml --cov=pyppium tests/ -m unity
+        args: run tox
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1  
