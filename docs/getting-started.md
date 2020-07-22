@@ -1,62 +1,103 @@
-# Getting Started
+# QuickStart
 
-This getting started is the most basic way to you start your tests with pyppium, the full documentation is under construction.
+The fastest way to start using pyppium is learning the about basic pyppium driver and fetcher.
 
-## Basic Usage
+## Basic Usage of Pyppium Driver
 
-Above a basic sample of a screen with some elements to fetch called ScreenOne.
+Create your capabilities as usual.
+
+```python
+
+caps_android = {
+
+            "platformName": "Android",
+            "automationName": "uiautomator2",
+            "deviceName": "Android Emulator",
+            "appPackage": "com.example.dummy",
+            "appActivity": "MainActivity",
+            "newCommandTimeout": 0,
+}
+
+```
+
+Import and add capabilities in pyppium driver init.
+
+```python
+
+from pyppium.driver import PyppiumDriver
+
+PyppiumDriver(caps_android)
+
+```
+
+Quit driver after test run.
+
+```python
+    
+PyppiumDriver.quit()
+
+```
+
+!!! Info
+    The pyppium driver default url connects to **```http://localhost:4723/wd/hub```**,
+    if you want to override send url parameter like this sample **``` 
+    PyppiumDriver("http://my-url-here", caps_android)```**
+    
+
+## Basic Usage of Fetcher
+
+Structure your screen with fetcher, this sample is about a login screen.
+
 
 ````python
 
-# A Sample of a screen with different locators.
+from pyppium.fetcher import fetch, iOS, Android
+
 
 class ScreenOne:
     
-    # fetch elements android and ios, by default pyppium wait element to be visible.
 
     _button = fetch(iOS("id", "buttonSignIn"), Android("id", "button"))
     _text_field = fetch(iOS("id", "inputUserName"), Android("id", "username"))
     _text_password = fetch(iOS("id", "InputPassword"), Android("id", "pass"))
 
-    # Login function with context elements.
 
     def login(self, username, password):
         self._text_field.send_keys(username)
         self._text_password.send_keys(password)
         self._button.click()
+
 ````
 
-The ScreenTwo is another screen before login.
+In this app the another screen is a welcome screen before login.
 
 ```python
+
+from pyppium.fetcher import fetch, iOS, Android
+
 
 class ScreenTwo:
     
-    # fetching static label
-
     _label = fetch(iOS("id", "labelHello"), Android("id", "welcome_message"))
     
-    # getting label text function
-
     def label_welcome_message(self):
         return self._label.text
+
 ```
 
+!!! Info
+    The fetcher always wait element to be visible.
 
-Use page in your test case
+## Testing
+
+Create your test and use your screens and pyppium driver.
 
 ```python
 
-# A simple test simulate a login in a android app.
-
 def test_android_basic_behaviours():
    
-    # Test data
-
     username = "Lully"
     password = "123456789"
-
-    # Capabilities to android
 
     caps_android ={
             "platformName": "Android",
@@ -67,23 +108,24 @@ def test_android_basic_behaviours():
             "newCommandTimeout": 0,
     }
     
-    # Start driver connection, with default url http://localhost:4723/wd/hub
-
     PyppiumDriver(caps_android)
     
-    # Instantiate screen and call login function
-
     ScreenOne().login(username, password)
-    
-    # Assert the result in screen with assertpy
 
-    assert_that(ScreenTwo().label_welcome_message()).contains(username)
-    
-    # Quit driver instance
+    assert username in ScreenTwo().label_welcome_message()
 
     PyppiumDriver.quit()
 
 ```
+
+!!! warning
+    The fetcher module search element by platform in capabilities. 
+    He only search for **Android** or **iOS**, if **```platformName```** is 
+    android he looking for android element and if ios he looking for
+    ios element.
+
+<br/>
+
 
 
 
