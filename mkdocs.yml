@@ -3,5 +3,17 @@ nav:
   - 'index.md'
   - 'installation.md'
   - 'getting-started.md'
-theme: readthedocs
+  - 'pyppium-driver-usage.md'
+  - 'fetcher-usage.md'
+  - 'decorators-usage.md'
+
+theme:
+  name: material
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
