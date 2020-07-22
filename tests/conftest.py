@@ -1,9 +1,12 @@
+import os
 from os.path import abspath
 from typing import List
 import appium
 import pytest
 from appium.webdriver import WebElement
 from assertpy import add_extension
+
+_CONF_FILE_PATH = abspath("./pyppium.yaml")
 
 
 @pytest.fixture
@@ -159,3 +162,71 @@ def platform_name(mocker, name):
 @pytest.fixture
 def mock_remote_connection(mocker):
     mocker.patch("appium.webdriver.Remote")
+
+
+@pytest.fixture
+def expected_user_configuration():
+    return {
+        "driver": {
+            "timeout": 45,
+            "appium_url": "http://localhost:3333/wd/hub",
+            "browserstack_url": "@hub-cloud.browserstack.com/wd/hub:8080",
+        }
+    }
+
+
+@pytest.fixture
+def expected_default_config():
+    return {
+        "driver": {
+            "timeout": 15,
+            "appium_url": "http://localhost:4723/wd/hub",
+            "browserstack_url": "@hub-cloud.browserstack.com/wd/hub",
+        }
+    }
+
+
+@pytest.fixture
+def yaml_conf(request):
+    def delete_yaml_file():
+        os.remove(_CONF_FILE_PATH)
+
+    request.addfinalizer(delete_yaml_file)
+
+    return write_to_yaml
+
+
+def write_to_yaml(content):
+    with open(_CONF_FILE_PATH, "x") as file:
+        file.write(content)
+
+
+@pytest.fixture
+def set_user_configuration(yaml_conf):
+    config = """
+            # Pyppium simple yaml config.
+    
+            driver:
+              timeout: 45
+              appium_url: "http://localhost:3333/wd/hub"
+              browserstack_url: "@hub-cloud.browserstack.com/wd/hub:8080"
+          
+            """
+
+    yaml_conf(config)
+
+
+@pytest.fixture
+def set_wrong_yaml_configuration(yaml_conf):
+    config = """
+            # Pyppium simple yaml config.
+            
+            {
+            driver
+              timeout45
+              appium_url "http://localhost:3333/wd/hub"
+              browserstack_ur "@hub-cloud.browserstack.com/wd/hub:8080"
+
+            """
+
+    yaml_conf(config)

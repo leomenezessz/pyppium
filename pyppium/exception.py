@@ -1,4 +1,4 @@
-class InvalidLocator(Exception):
+class InvalidLocatorException(Exception):
     pass
 
 
@@ -11,4 +11,8 @@ class InvalidPlatformException(Exception):
 
 
 class NotFoundElementToClickException(Exception):
+    pass
+
+
+class InvalidSettingsException(Exception):
     pass

@@ -2,10 +2,11 @@ from appium.webdriver import WebElement
 from appium.webdriver.common.mobileby import MobileBy
 from selenium.webdriver.common.by import By
 from pyppium import condition, exception, driver
+from pyppium.settings import config
 
 _SELENIUM_LOCATORS = None
 _APPIUM_LOCATORS = None
-_FETCH_TIMEOUT = 8
+_FETCH_TIMEOUT = config["driver"]["timeout"]
 
 
 def _validate_fetch(locator, plat):
@@ -13,7 +14,7 @@ def _validate_fetch(locator, plat):
         locator not in _get_appium_locators()
         and locator not in _get_selenium_locators()
     ):
-        raise exception.InvalidLocator(
+        raise exception.InvalidLocatorException(
             f"Invalid locator '{locator}' to {plat} platform."
         )
 

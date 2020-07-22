@@ -10,7 +10,7 @@ tests/e2e/apps/dummy.app
 
 # Poetry
 
-pyppium_wrapper.egg-info
+pyppium.egg-info
 dist
 
 # Pytest Coverage
@@ -23,5 +23,9 @@ coverage.xml
 # Python
 
 __pycache__/
+
+# Tox
+
+.tox
 
 
