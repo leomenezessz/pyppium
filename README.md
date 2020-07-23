@@ -3,7 +3,7 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![codecov](https://codecov.io/gh/leomenezessz/pyppium/branch/master/graph/badge.svg)](https://codecov.io/gh/leomenezessz/pyppium)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/leomenezessz/pyppium/blob/master/LICENSE)
-
+![GitHub Pages Deploy](https://github.com/leomenezessz/pyppium/workflows/GitHub%20Pages%20Deploy%/badge.svg?branch=master)
 
 
 Pyppium is a wrapper of Appium-Python-Client for cross mobile testing.
