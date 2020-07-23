@@ -1,8 +1,7 @@
 
 # This action is a simple continuous integration to run only if have a pull request to related branches.
-
 # Actions Dependencies :
-
+#
 # - https://github.com/codecov/codecov-action used to upload code coverage.
 # - https://github.com/actions/checkout used to git support features.
 # - https://github.com/abatilo/actions-poetry used to manage python dependencies.

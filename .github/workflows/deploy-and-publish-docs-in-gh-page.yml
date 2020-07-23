@@ -1,0 +1,24 @@
+
+# This action is a simple continuous documentation delivery.
+# This sample is extract from this site: https://squidfunk.github.io/mkdocs-material/publishing-your-site/
+
+# Actions Dependencies :
+
+# - https://github.com/actions/checkout used to git support features.
+# - https://github.com/actions/setup-python used to python environment.
+
+name: Publish Documentation to GitHub Pages
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force
