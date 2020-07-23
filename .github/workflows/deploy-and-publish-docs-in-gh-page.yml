@@ -7,7 +7,7 @@
 # - https://github.com/actions/checkout used to git support features.
 # - https://github.com/actions/setup-python used to python environment.
 
-name: Publish Documentation to GitHub Pages
+name: GitHub Pages Deploy
 on:
   push:
     branches:
