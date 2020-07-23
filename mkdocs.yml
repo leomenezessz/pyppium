@@ -9,6 +9,8 @@ nav:
 
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github
 
 markdown_extensions:
   - admonition
@@ -16,4 +18,5 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+repo_name: https://github.com/leomenezessz/pyppium
 
