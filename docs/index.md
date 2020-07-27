@@ -4,7 +4,12 @@ Pyppium is a Appium-Python-Client wrapper for cross mobile testing. :tada:
 
 ## Project Motivation
 
+<<<<<<< HEAD
 Pyppium has been developed focusing on the cross tests scenarios *quality assurance*.
+=======
+Pyppium has been mainly developed thinking in the *Quality Assurance* cross tests scenarios problems. 
+Pyppium has been developed with a focus on *Quality Assurance* cross tests scenarios problems.
+>>>>>>> Fix typos (#7)
 
 ***The most common issues are:***
 
@@ -12,21 +17,37 @@ Pyppium has been developed focusing on the cross tests scenarios *quality assura
 - :octicons-thumbsdown-16: - *Duplicated screens to isolate the problem above.*
 - :octicons-thumbsdown-16: - *A BaseScreen or a Helper created to repeat scenarios.*
 
+<<<<<<< HEAD
 Pyppium can help you saving your time reducing complexity, increasing efficiency and also avoiding these boring and repetitive work problems.
 
 ## How it works
+=======
+Pyppium to the rescue! You shall not waste any more time with this boring and repetitive work.
+>>>>>>> Fix typos (#7)
 
 Pyppium is based on a technical layer that abstracts some Appium behaviours to help in QA handling. 
 
+<<<<<<< HEAD
 With Pyppium you will see:
 
  - :octicons-check-circle-16: *Screen Object Pattern with abstraction to fetch elements.*
  - :octicons-check-circle-16: *Cross Mobile Testing focus with some utilities to commons problems.*
  - :octicons-check-circle-16: *Focus on QA daily problems (like waits), configurations and some boilerplate.*
+=======
+Pyppium tries to work on the technical layer to abstract some Appium's behaviors to help on QA usability. With Pyppium you will see:
+
+:octicons-check-circle-16: *Screen Object Pattern with abstractions to fetch elements.*</br>
+:octicons-check-circle-16: *Cross Mobile Testing focus, with utilities to aid with common problems.*</br>
+:octicons-check-circle-16: *Focus on QA daily problems, like waits, configurations and boilerplates.*</br>
+>>>>>>> Fix typos (#7)
 
 ## Special Thanks
  
+<<<<<<< HEAD
  Pyppium count on many packages for trying to deliver a good framework. And of course, these packages are amazing!
+=======
+ Pyppium makes use of many packages to try to deliver a good framework. And these packages are amazing, but this should go without saying!
+>>>>>>> Fix typos (#7)
  
  - [Appium-Python-Client](https://pypi.org/project/Appium-Python-Client/)
  - [PyYAML](https://pypi.org/project/PyYAML/)
@@ -65,4 +86,8 @@ With Pyppium you will see:
  OR OTHER DEALINGS IN THE SOFTWARE.
 
  
+<<<<<<< HEAD
  <br />
+=======
+ <br />  
+>>>>>>> Fix typos (#7)
