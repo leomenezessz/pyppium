@@ -1,6 +1,6 @@
 # QuickStart
 
-The fastest way to start using pyppium to learn about the basics: Pyppium's fetcher and PyppiumDriver.
+The fastest way to start using pyppium is to learn about the basics: Pyppium's fetcher and PyppiumDriver.
 
 ## Basic Usage of Pyppium Driver
 
