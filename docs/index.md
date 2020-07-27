@@ -17,15 +17,15 @@ Pyppium to the rescue! You shall not waste any more time with this boring and re
 
 ## Philosophy
 
-Pyppium is trying to work on the technical layer to abstract some Appium's behaviors to help on QA usability. With Pyppium you will see:
+Pyppium tries to work on the technical layer to abstract some Appium's behaviors to help on QA usability. With Pyppium you will see:
 
-:octicons-check-circle-16: *Screen Object Pattern with abstraction to fetch elements.*</br>
-:octicons-check-circle-16: *Cross Mobile Testing focus, with some utilities to commons problems.*</br>
-:octicons-check-circle-16: *Focus on QA daily problems, like waits, configurations and some boilerplate.*</br>
+:octicons-check-circle-16: *Screen Object Pattern with abstractions to fetch elements.*</br>
+:octicons-check-circle-16: *Cross Mobile Testing focus, with utilities to aid with common problems.*</br>
+:octicons-check-circle-16: *Focus on QA daily problems, like waits, configurations and boilerplates.*</br>
 
 ## Especial Thanks
  
- Pyppium makes use of many packages to try to deliver a good framework. And of course, these packages are amazing!
+ Pyppium makes use of many packages to try to deliver a good framework. And these packages are amazing, but this should go without saying!
  
  - [Appium-Python-Client](https://pypi.org/project/Appium-Python-Client/)
  - [PyYAML](https://pypi.org/project/PyYAML/)
