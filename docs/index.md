@@ -1,31 +1,32 @@
 # Welcome to Pyppium!  
 
-Pyppium is a wrapper of Appium-Python-Client for cross mobile testing. :tada:
+Pyppium is a Appium-Python-Client wrapper for cross mobile testing. :tada:
 
 ## Project Motivation
 
-Pyppium has been mainly developed thinking in the *Quality Assurance* cross tests scenarios problems. 
+Pyppium has been developed focusing on the cross tests scenarios *quality assurance*.
 
-***Among them the most common problems are:***
+***The most common issues are:***
 
 - :octicons-thumbsdown-16: - *A lot of conditionals along the tests.*
-- :octicons-thumbsdown-16: - *Duplicate of screens to isolate the problem above.*
-- :octicons-thumbsdown-16: - *Add a baseScreen or a helper to repetitive waits scenarios.*
+- :octicons-thumbsdown-16: - *Duplicated screens to isolate the problem above.*
+- :octicons-thumbsdown-16: - *A BaseScreen or a Helper created to repeat scenarios.*
 
+Pyppium can help you saving your time reducing complexity, increasing efficiency and also avoiding these boring and repetitive work problems.
 
-Thinking in this bored repetitive work and problems pyppium came to help you to dont waste your time with this implementations.
+## How it works
 
-## Philosophy
+Pyppium is based on a technical layer that abstracts some Appium behaviours to help in QA handling. 
 
-Pyppium trying to work on technical layer to abstract some appium behaviours to help on QA usability. With pyppium you will see:
+With Pyppium you will see:
 
  - :octicons-check-circle-16: *Screen Object Pattern with abstraction to fetch elements.*
- - :octicons-check-circle-16: *Cross Mobile Testing focus, with some utilities to commons problems.*
- - :octicons-check-circle-16: *Focus on QA daily problems, like waits, configurations and some boilerplate.*
+ - :octicons-check-circle-16: *Cross Mobile Testing focus with some utilities to commons problems.*
+ - :octicons-check-circle-16: *Focus on QA daily problems (like waits), configurations and some boilerplate.*
 
-## Especial Thanks
+## Special Thanks
  
- Pyppium enjoy many packages to trying delivery a good framework. And of course this packages are amazing!
+ Pyppium count on many packages for trying to deliver a good framework. And of course, these packages are amazing!
  
  - [Appium-Python-Client](https://pypi.org/project/Appium-Python-Client/)
  - [PyYAML](https://pypi.org/project/PyYAML/)
@@ -64,4 +65,4 @@ Pyppium trying to work on technical layer to abstract some appium behaviours to 
  OR OTHER DEALINGS IN THE SOFTWARE.
 
  
- <br />  
+ <br />

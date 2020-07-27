@@ -5,7 +5,9 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/leomenezessz/pyppium/blob/master/LICENSE)
 ![GitHub Pages Deploy](https://github.com/leomenezessz/pyppium/workflows/GitHub%20Pages%20Deploy/badge.svg?branch=master)
 
-Pyppium is a wrapper of Appium-Python-Client for cross mobile testing.
+Pyppium is a Appium-Python-Client wrapper for cross mobile testing. 
+It provides a simple and concise way to build your tests, saving your time and focusing on what really matters in your (Android/iOS) Application. 
+
 
 ## Installation
 
@@ -17,7 +19,8 @@ $ pip install pyppium
 
 ## Basic Usage
 
-Create your screen like this
+The following code will give you the necessary to create a simple flow that searches for components on your application screen and perform an action.
+Others components are supported based on the Appium usage, so feel free to explore and setup your own custom actions.
 
 ```python
 
@@ -37,7 +40,8 @@ class ScreenOne:
     
 ```
 
-User your screen in test after start pyppium driver
+After that, you can use the class above (ScreenOne) to create an specific scenario. 
+Note that you need to start Pyppium Driver.
 
 ```python
 
@@ -72,9 +76,9 @@ def test_android_basic_behaviours():
 
 - https://leomenezessz.github.io/pyppium/
 
-## Especial Thanks
+## Special Thanks
  
- Pyppium enjoy many packages to trying delivery a good framework. And of course this packages are amazing!
+ Pyppium count on many packages for trying to deliver a good framework. And of course, these packages are amazing!
  
  - [Appium-Python-Client](https://pypi.org/project/Appium-Python-Client/)
  - [PyYAML](https://pypi.org/project/PyYAML/)
@@ -112,11 +116,3 @@ def test_android_basic_behaviours():
  OR OTHER DEALINGS IN THE SOFTWARE.
  
  <br/>
-
-
-
-
-
-
-
-
