@@ -51,7 +51,7 @@ class LoginScreen:
 
 With `#!python ignore` decorator you just need to send the platform name what you **want to ignore**.
 
-When you run the tests to LoginScreen all tests should be pass because `#!python def click_checkbox() will not run for ios.
+When you run the tests to LoginScreen all tests should be pass because `#!python def click_checkbox()` will not run for ios.
 
 ```python
 

@@ -1,26 +1,28 @@
 # Welcome to Pyppium!  
 
-Pyppium is a Appium-Python-Client wrapper for cross mobile testing. It provides a simple and concise way to run your tests, saving your time and focusing on what really matters in your **(Android/iOS)** application.
+Pyppium is a Appium-Python-Client wrapper for cross mobile testing. :tada:
 
 ## Project Motivation
 
-Pyppium has been developed focusing on the cross tests scenarios quality assurance.
+Pyppium has been developed focusing on the cross tests scenarios *quality assurance*.
 
 ***The most common issues are:***
 
-:octicons-thumbsdown-16: - *A lot of conditionals along the tests.*
-:octicons-thumbsdown-16: - *Duplicated screens to isolate the problem above.*
-:octicons-thumbsdown-16: - *A BaseScreen or a Helper created to repeat scenarios.*
+:octicons-thumbsdown-16: *A lot of conditionals along the tests.*<br/>
+:octicons-thumbsdown-16: *Duplicated screens to isolate the problem above.*<br/>
+:octicons-thumbsdown-16: *A BaseScreen or a Helper created to repeat scenarios.*<br/>
+
+Pyppium can help you saving your time reducing complexity, increasing efficiency and also avoiding these boring and repetitive work problems.
 
 ## How it works
 
-Pyppium tries to work on the technical layer to abstract some Appium's behaviors to help on QA usability. 
+Pyppium is based on a technical layer that abstracts some Appium behaviours to help in QA handling. 
 
 With Pyppium you will see:
 
-:octicons-check-circle-16: *Screen Object Pattern with abstraction to fetch elements.*
-:octicons-check-circle-16: *Cross Mobile Testing focus with some utilities to commons problems.*
-:octicons-check-circle-16: *Focus on QA daily problems (like waits), configurations and some boilerplate.*
+:octicons-check-circle-16: *Screen Object Pattern with abstraction to fetch elements.*<br/>
+:octicons-check-circle-16: *Cross Mobile Testing focus with some utilities to commons problems.*<br/>
+:octicons-check-circle-16: *Focus on QA daily problems (like waits), configurations and some boilerplate.*<br/>
 
 ## Special Thanks
  
@@ -62,5 +64,5 @@ With Pyppium you will see:
  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
  OR OTHER DEALINGS IN THE SOFTWARE.
 
+ 
  <br />
-
