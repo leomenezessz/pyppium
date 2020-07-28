@@ -6,6 +6,7 @@ nav:
   - 'pyppium-driver.md'
   - 'fetcher.md'
   - 'decorators.md'
+  - 'settings.md'
 
 
 repo_url: https://github.com/leomenezessz/pyppium
@@ -26,5 +27,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.inlinehilite
+  - pymdownx.tabbed
+
 
 

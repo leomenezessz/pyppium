@@ -46,7 +46,7 @@ Note that you need to start Pyppium Driver.
 ```python
 
 from pyppium.driver import PyppiumDriver
-from tests.e2e.screens.screen import ScreenOne, ScreenTwo
+from tests.e2e.screens.screen import LoginScreen, WelcomeScreen
 
 
 def test_android_basic_behaviours():
@@ -65,9 +65,9 @@ def test_android_basic_behaviours():
 
     PyppiumDriver(caps_android)
 
-    ScreenOne().login(username, password)
+    LoginScreen().login(username, password)
 
-    assert username in ScreenTwo().label_welcome_message()
+    assert username in WelcomeScreen().label_welcome_message()
 
     PyppiumDriver.quit()
 ```

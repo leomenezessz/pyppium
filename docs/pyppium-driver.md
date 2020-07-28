@@ -179,3 +179,4 @@ def test_should_show_welcome_message(capabilities):
     Remember to create your screen using pyppium [fetcher]("https://leomenezessz.github.io/pyppium/fetcher/").
 
 
+<br/>

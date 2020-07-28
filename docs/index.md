@@ -8,9 +8,9 @@ Pyppium has been developed focusing on the cross tests scenarios quality assuran
 
 ***The most common issues are:***
 
-- :octicons-thumbsdown-16: - *A lot of conditionals along the tests.*
-- :octicons-thumbsdown-16: - *Duplicated screens to isolate the problem above.*
-- :octicons-thumbsdown-16: - *A BaseScreen or a Helper created to repeat scenarios.*
+:octicons-thumbsdown-16: - *A lot of conditionals along the tests.*
+:octicons-thumbsdown-16: - *Duplicated screens to isolate the problem above.*
+:octicons-thumbsdown-16: - *A BaseScreen or a Helper created to repeat scenarios.*
 
 ## How it works
 
@@ -18,9 +18,9 @@ Pyppium tries to work on the technical layer to abstract some Appium's behaviors
 
 With Pyppium you will see:
 
- - :octicons-check-circle-16: *Screen Object Pattern with abstraction to fetch elements.*
- - :octicons-check-circle-16: *Cross Mobile Testing focus with some utilities to commons problems.*
- - :octicons-check-circle-16: *Focus on QA daily problems (like waits), configurations and some boilerplate.*
+:octicons-check-circle-16: *Screen Object Pattern with abstraction to fetch elements.*
+:octicons-check-circle-16: *Cross Mobile Testing focus with some utilities to commons problems.*
+:octicons-check-circle-16: *Focus on QA daily problems (like waits), configurations and some boilerplate.*
 
 ## Special Thanks
  
