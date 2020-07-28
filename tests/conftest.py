@@ -9,19 +9,6 @@ from assertpy import add_extension
 _CONF_FILE_PATH = abspath("./pyppium.yaml")
 
 
-@pytest.fixture
-def android_caps():
-    return {
-        "platformName": "Android",
-        "automationName": "uiautomator2",
-        "deviceName": "Android Emulator",
-        "appPackage": "com.example.dummy",
-        "appActivity": "MainActivity",
-        "newCommandTimeout": 0,
-        "app": abspath("tests/e2e/apps/app-debug.apk"),
-    }
-
-
 def is_all_items_instance_of(self, instance):
     for item in self.val:
         if not isinstance(item, instance):
@@ -32,17 +19,6 @@ def is_all_items_instance_of(self, instance):
 @pytest.fixture(scope="module")
 def items_isinstance_extension():
     add_extension(is_all_items_instance_of)
-
-
-@pytest.fixture
-def ios_caps():
-    return {
-        "platformName": "iOS",
-        "automationName": "xcuitest",
-        "deviceName": "iPhone 8",
-        "platformVersion": "13.3",
-        "app": abspath("tests/e2e/apps/dummy.app"),
-    }
 
 
 @pytest.fixture
