@@ -1,10 +1,10 @@
 # Pyppium Driver
 
-The Pyppium driver is an abstraction to the conventional driver. He tries to simplify driver usage and sharing instance in your test runner.
+The Pyppium driver is an abstraction to the conventional driver. He tries to simplify the driver usage and sharing instance in your test runner.
 
 ## Driver Basics
 
-Pyppium driver has some facilities to use, and have some default parameters to simplify your tests. After start using the pyppium remember to import it.
+Pyppium driver has some facilities to use, and have some default parameters to simplify your tests. After start using the Pyppium remember to import it.
 
 ```python
 from pyppium.driver import PyppiumDriver
@@ -12,7 +12,7 @@ from pyppium.driver import PyppiumDriver
 
 ### Connect to Appium Default Url 
 
-If the pyppium driver starts only with caps he will connect to ```"http://localhost:4723/wd/hub"```.
+If the Pyppium driver starts only, it will connect to ```"http://localhost:4723/wd/hub"```.
 
 ```python
 
@@ -21,11 +21,11 @@ Pyppium(caps)
 ```
 
 !!! Hint
-    You can read more about appium capabilities in this [appium official documentation](http://appium.io/docs/en/writing-running-appium/caps/).
+    You can read more about appium capabilities in this [Appium official documentation](http://appium.io/docs/en/writing-running-appium/caps/).
 
 ### Override Default Appium Url
 
-You can override the appium default URL.
+You can override the Appium default URL.
 
 ```python
 
@@ -45,7 +45,7 @@ Pyppium.instance()
 
 This   `#!python instance()` call return a `#!python webdriver.Remote`. You can access attributes and functions as usual.
 
-#### Screenshoot
+#### Screenshot
 
 ```python
 PyppiumDriver.instance().get_screenshot_as_png()
@@ -126,12 +126,12 @@ PyppiumDriver(caps, user="meiko", keys="keys", use_browserstack=False)
 ````
 
 !!! Warning
-    Remember BrowserStack have specific capabilities, you can check this in [browserstack official documentation](https://www.browserstack.com/app-automate/capabilities). 
+    Remember! BrowserStack have specific capabilities, you can check this in [Browserstack official documentation](https://www.browserstack.com/app-automate/capabilities). 
 
 
 ## Pytest Real Life Sample
 
-If your application has the same behaviours you can run easy a test for android and ios with only one test.
+If your application has the same behaviours, you can easily run a test for android and ios with only one test.
 
 First, create your capabilities for android and ios.
 
