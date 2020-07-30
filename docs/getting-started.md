@@ -57,15 +57,15 @@ from pyppium.fetcher import fetch, iOS, Android
 class ScreenOne:
     
 
-    _button = fetch(iOS("id", "buttonSignIn"), Android("id", "button"))
-    _text_field = fetch(iOS("id", "inputUserName"), Android("id", "username"))
-    _text_password = fetch(iOS("id", "InputPassword"), Android("id", "pass"))
+    _button_sign_in = fetch(iOS("id", "buttonSignIn"), Android("id", "button"))
+    _input_username = fetch(iOS("id", "inputUserName"), Android("id", "username"))
+    _input_password = fetch(iOS("id", "InputPassword"), Android("id", "pass"))
 
 
     def login(self, username, password):
-        self._text_field.send_keys(username)
-        self._text_password.send_keys(password)
-        self._button.click()
+        self._input_username.send_keys(username)
+        self._input_password.send_keys(password)
+        self._button_sign_in.click()
 
 ````
 
@@ -78,10 +78,10 @@ from pyppium.fetcher import fetch, iOS, Android
 
 class ScreenTwo:
     
-    _label = fetch(iOS("id", "labelHello"), Android("id", "welcome_message"))
+    _label_welcome_message = fetch(iOS("id", "labelHello"), Android("id", "welcome_message"))
     
     def label_welcome_message(self):
-        return self._label.text
+        return self._label_welcome_message.text
 
 ```
 
@@ -96,7 +96,7 @@ Create your test and use your screens and PyppiumDriver.
 
 def test_android_basic_behaviours():
    
-    username = "Lully"
+    username = "lully"
     password = "123456789"
 
     caps_android ={

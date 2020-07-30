@@ -1,6 +1,8 @@
-# Welcome to Pyppium!  
+# Welcome to Pyppium!
 
-Pyppium is a Appium-Python-Client wrapper for cross mobile testing. :tada:
+Pyppium is an Appium-Python-Client wrapper for cross mobile testing. It helps you to save your time by reducing complexity, increasing efficiency and also avoiding these boring and repetitive work problems.
+
+Pyppium assists you to focus on what really matters, like your business rules, and provides an environment to start creating your application's screens and your test scenarios as fast as possible. 
 
 ## Project Motivation
 
@@ -12,7 +14,6 @@ Pyppium has been developed focusing on the cross tests scenarios *quality assura
 :octicons-thumbsdown-16: *Duplicated screens to isolate the problem above.*<br/>
 :octicons-thumbsdown-16: *A BaseScreen or a Helper created to repeat scenarios.*<br/>
 
-Pyppium can help you saving your time reducing complexity, increasing efficiency and also avoiding these boring and repetitive work problems.
 
 ## How it works
 
