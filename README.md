@@ -5,9 +5,9 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/leomenezessz/pyppium/blob/master/LICENSE)
 ![GitHub Pages Deploy](https://github.com/leomenezessz/pyppium/workflows/GitHub%20Pages%20Deploy/badge.svg?branch=master)
 
-Pyppium is a Appium-Python-Client wrapper for cross mobile testing. 
-It provides a simple and concise way to build your tests, saving your time and focusing on what really matters in your (Android/iOS) Application. 
-
+Pyppium is an Appium-Python-Client wrapper for cross mobile testing. It helps you to save your time by reducing complexity, increasing efficiency 
+and also avoiding these boring and repetitive work problems. Assists you to focus on what really matters, like your business rules, and provides an
+environment to start creating your application's screens and your test scenarios as fast as possible.
 
 ## Installation
 
@@ -28,14 +28,14 @@ from pyppium.fetcher import fetch, iOS, Android
 
 
 class ScreenOne:
-    _button = fetch(iOS("id", "buttonSignIn"), Android("id", "button"))
-    _text_field = fetch(iOS("id", "inputUserName"), Android("id", "username"))
-    _text_password = fetch(iOS("id", "InputPassword"), Android("id", "pass"))
+    _button_sign_in = fetch(iOS("id", "buttonSignIn"), Android("id", "button"))
+    _input_username = fetch(iOS("id", "inputUserName"), Android("id", "username"))
+    _input_password = fetch(iOS("id", "InputPassword"), Android("id", "pass"))
 
     def login(self, username, password):
-        self._text_field.send_keys(username)
-        self._text_password.send_keys(password)
-        self._button.click()
+        self._input_username.send_keys(username)
+        self._input_password.send_keys(password)
+        self._button_sign_in.click()
 
     
 ```
@@ -46,7 +46,7 @@ Note that you need to start Pyppium Driver.
 ```python
 
 from pyppium.driver import PyppiumDriver
-from tests.e2e.screens.screen import ScreenOne, ScreenTwo
+from tests.e2e.screens.screen import LoginScreen, WelcomeScreen
 
 
 def test_android_basic_behaviours():
@@ -65,9 +65,9 @@ def test_android_basic_behaviours():
 
     PyppiumDriver(caps_android)
 
-    ScreenOne().login(username, password)
+    LoginScreen().login(username, password)
 
-    assert username in ScreenTwo().label_welcome_message()
+    assert username in WelcomeScreen().label_welcome_message()
 
     PyppiumDriver.quit()
 ```
@@ -75,6 +75,16 @@ def test_android_basic_behaviours():
 ## Documentation
 
 - https://leomenezessz.github.io/pyppium/
+
+## Tests
+
+Run all unity tests.
+
+```
+
+$ tox
+
+``` 
 
 ## Special Thanks
  

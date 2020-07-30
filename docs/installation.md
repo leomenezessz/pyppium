@@ -3,7 +3,7 @@
 
 ## Pip
 
-You can install pyppium using pip as usual.
+You can install Pyppium using pip as usual:
 
 
 ````
@@ -12,7 +12,7 @@ pip install pyppium
 
 ## GitHub 
 
-Or you can use github repository like samples below.
+Or you can directly refer to the repository in GitHub, like samples below.
 
 ### Latest Version
 

@@ -1,6 +1,8 @@
-# Welcome to Pyppium!  
+# Welcome to Pyppium!
 
-Pyppium is a Appium-Python-Client wrapper for cross mobile testing. :tada:
+Pyppium is an Appium-Python-Client wrapper for cross mobile testing. It helps you to save your time by reducing complexity, increasing efficiency and also avoiding these boring and repetitive work problems.
+
+Pyppium assists you to focus on what really matters, like your business rules, and provides an environment to start creating your application's screens and your test scenarios as fast as possible. 
 
 ## Project Motivation
 
@@ -8,11 +10,10 @@ Pyppium has been developed focusing on the cross tests scenarios *quality assura
 
 ***The most common issues are:***
 
-- :octicons-thumbsdown-16: - *A lot of conditionals along the tests.*
-- :octicons-thumbsdown-16: - *Duplicated screens to isolate the problem above.*
-- :octicons-thumbsdown-16: - *A BaseScreen or a Helper created to repeat scenarios.*
+:octicons-thumbsdown-16: *A lot of conditionals along the tests.*<br/>
+:octicons-thumbsdown-16: *Duplicated screens to isolate the problem above.*<br/>
+:octicons-thumbsdown-16: *A BaseScreen or a Helper created to repeat scenarios.*<br/>
 
-Pyppium can help you saving your time reducing complexity, increasing efficiency and also avoiding these boring and repetitive work problems.
 
 ## How it works
 
@@ -20,9 +21,9 @@ Pyppium is based on a technical layer that abstracts some Appium behaviours to h
 
 With Pyppium you will see:
 
- - :octicons-check-circle-16: *Screen Object Pattern with abstraction to fetch elements.*
- - :octicons-check-circle-16: *Cross Mobile Testing focus with some utilities to commons problems.*
- - :octicons-check-circle-16: *Focus on QA daily problems (like waits), configurations and some boilerplate.*
+:octicons-check-circle-16: *Screen Object Pattern with abstraction to fetch elements.*<br/>
+:octicons-check-circle-16: *Cross Mobile Testing focus with some utilities to commons problems.*<br/>
+:octicons-check-circle-16: *Focus on QA daily problems (like waits), configurations and some boilerplate.*<br/>
 
 ## Special Thanks
  

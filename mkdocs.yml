@@ -3,14 +3,22 @@ nav:
   - 'index.md'
   - 'installation.md'
   - 'getting-started.md'
-  - 'pyppium-driver-usage.md'
-  - 'fetcher-usage.md'
-  - 'decorators-usage.md'
+  - 'pyppium-driver.md'
+  - 'fetcher.md'
+  - 'decorators.md'
+  - 'settings.md'
+
+
+repo_url: https://github.com/leomenezessz/pyppium
 
 theme:
   name: material
+  palette:
+    primary: deep purple
+    accent: deep purple
   icon:
-    repo: fontawesome/brands/github
+    repo: fontawesome/brands/github-alt
+
 
 markdown_extensions:
   - admonition
@@ -18,5 +26,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-repo_name: https://github.com/leomenezessz/pyppium
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+
+
 
