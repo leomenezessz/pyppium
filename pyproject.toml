@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyppium"
-version = "0.3.1"
+version = "0.4.1"
 description = "Pyppium is a wrapper of Appium-Python-Client for cross mobile testing."
 authors = ["Leonardo Menezes <leonardosmenezes.ssz@gmail.com>"]
 repository = "https://github.com/leomenezessz/pyppium"
