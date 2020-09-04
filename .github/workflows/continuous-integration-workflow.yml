@@ -19,6 +19,9 @@ on:
 jobs:
   test:
     name: Running tests in python ${{matrix.python-version}} and ${{matrix.os}}
+    env:
+      BROWSERSTACK_ACCESS_KEY: ${{secrets.BROWSERSTACK_ACCESS_KEY}}
+      BROWSERSTACK_USERNAME: ${{secrets.BROWSERSTACK_USERNAME}}
 
     runs-on: ${{matrix.os}}
     strategy:
