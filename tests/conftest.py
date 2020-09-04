@@ -5,6 +5,7 @@ import appium
 import pytest
 from appium.webdriver import WebElement
 from assertpy import add_extension
+from httpx import Response, Request, Headers
 
 _CONF_FILE_PATH = abspath("./pyppium.yaml")
 
@@ -241,3 +242,36 @@ def set_wrong_yaml_configuration(yaml_conf):
             """
 
     yaml_conf(config)
+
+
+@pytest.fixture
+def success_response():
+    return Response(
+        status_code=200,
+        content=b'{"pyppium" : "Testing!"}',
+        request=Request(url="https://leomenezessz.github.io/pyppium/", method="get"),
+    )
+
+
+@pytest.fixture
+def failure_response():
+    return Response(
+        status_code=404,
+        request=Request(url="https://leomenezessz.github.io/pyppium/", method="get"),
+        headers=Headers(
+            {
+                "cache-control": "no-cache",
+                "content-type": "application/json; charset=utf-8",
+                "date": "Fri, 04 Sep 2020 06:35:18 GMT",
+                "server": "nginx",
+                "status": "404 Not Found",
+                "vary": "Origin",
+                "x-powered-by": "Phusion Passenger",
+                "x-request-id": "632eeff4-a6f4-4016-82aa-75d10805f149",
+                "x-runtime": "0.093190",
+                "x-ua-compatible": "IE=Edge,chrome=1",
+                "content-length": "36",
+                "connection": "keep-alive",
+            }
+        ),
+    )

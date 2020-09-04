@@ -1,3 +1,4 @@
+import inspect
 import json
 import sys
 from httpx import Response
@@ -36,14 +37,15 @@ def _request_error(resp: Response, backtrace):
         f"{backtrace} :\n"
         f"URL ==> {resp.url}\n"
         f"STATUS ==> {resp.status_code}\n"
-        f"HEADERS ==> {json.dumps(resp.headers.items(), indent=4)}"
+        f"HEADERS ==> {resp.headers.items()}"
     )
 
 
 class response(object):
     def __call__(self, function):
         def wrapper(*args, **kwargs):
-            backtrace = f"{args[0].__module__}.{function.__name__}"
+            module = args[0].__module__ if "self" in inspect.getfullargspec(function).args else self.__module__
+            backtrace = f"{module}.{function.__name__}"
 
             resp = function(*args, **kwargs)
 
