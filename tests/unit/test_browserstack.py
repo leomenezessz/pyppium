@@ -59,7 +59,7 @@ def test_get_apps_by_custom_id():
     ],
 )
 def test_upload_app(
-        upload, mock_open_file, mock_httpx_content_stream_headers, mock_httpx_encode
+    upload, mock_open_file, mock_httpx_content_stream_headers, mock_httpx_encode
 ):
     resp = BrowserStackApi().upload_app("path/to/my/app", upload["custom_id"])
     assert_that(resp.status_code).is_equal_to(200)

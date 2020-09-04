@@ -44,7 +44,11 @@ def _request_error(resp: Response, backtrace):
 class response(object):
     def __call__(self, function):
         def wrapper(*args, **kwargs):
-            module = args[0].__module__ if "self" in inspect.getfullargspec(function).args else self.__module__
+            module = (
+                args[0].__module__
+                if "self" in inspect.getfullargspec(function).args
+                else self.__module__
+            )
             backtrace = f"{module}.{function.__name__}"
 
             resp = function(*args, **kwargs)
