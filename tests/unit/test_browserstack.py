@@ -3,6 +3,7 @@ from assertpy import assert_that
 from pyppium.browserstack import BrowserStackApi
 
 
+@pytest.mark.unity
 @pytest.mark.vcr
 def test_show_recent_uploads():
     resp = BrowserStackApi().recent_uploads()
@@ -13,6 +14,7 @@ def test_show_recent_uploads():
     )
 
 
+@pytest.mark.unity
 @pytest.mark.vcr
 def test_delete_app():
     resp = BrowserStackApi().delete_app("8cda444d6390db17b0a144be79be9ed996406dbc")
@@ -20,6 +22,7 @@ def test_delete_app():
     assert_that(resp.json()).is_equal_to({"success": True})
 
 
+@pytest.mark.unity
 @pytest.mark.vcr
 def test_get_apps_by_custom_id():
     resp = BrowserStackApi().get_apps_by_custom_id("android")
@@ -36,6 +39,7 @@ def test_get_apps_by_custom_id():
     )
 
 
+@pytest.mark.unity
 @pytest.mark.vcr
 @pytest.mark.parametrize(
     "upload",
@@ -55,13 +59,14 @@ def test_get_apps_by_custom_id():
     ],
 )
 def test_upload_app(
-    upload, mock_open_file, mock_httpx_content_stream_headers, mock_httpx_encode
+        upload, mock_open_file, mock_httpx_content_stream_headers, mock_httpx_encode
 ):
     resp = BrowserStackApi().upload_app("path/to/my/app", upload["custom_id"])
     assert_that(resp.status_code).is_equal_to(200)
     assert_that(resp.json()).is_equal_to(upload["expected"])
 
 
+@pytest.mark.unity
 @pytest.mark.vcr
 def test_update_browserstack_test_status(expected_upload_test_response):
     resp = BrowserStackApi().update_test_status(
