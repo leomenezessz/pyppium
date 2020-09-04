@@ -1,0 +1,53 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api-cloud.browserstack.com
+      user-agent:
+      - python-httpx/0.14.3
+    method: DELETE
+    uri: https://api-cloud.browserstack.com/app-automate/app/delete/8cda444d6390db17b0a144be79be9ed996406dbc
+  response:
+    content: '{"success":true}'
+    headers:
+      cache-control:
+      - max-age=0, private, must-revalidate
+      connection:
+      - keep-alive
+      content-length:
+      - '16'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 03 Sep 2020 21:53:14 GMT
+      etag:
+      - '"7363e85fe9edee6f053a4b319588c086"'
+      server:
+      - nginx
+      set-cookie:
+      - tracking_id=f1e19377-3c24-4390-bd00-1d87c3a16f7f; domain=.browserstack.com;
+        path=/; expires=Wed, 03 Sep 2025 21:53:14 -0000
+      status:
+      - 200 OK
+      vary:
+      - Origin
+      x-frame-options:
+      - SAMEORIGIN
+      x-powered-by:
+      - Phusion Passenger
+      x-request-id:
+      - 7a841883-a74f-40ef-8927-3d328cf59b83
+      x-runtime:
+      - '0.223402'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

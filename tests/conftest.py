@@ -141,6 +141,41 @@ def mock_remote_connection(mocker):
 
 
 @pytest.fixture
+def mock_httpx_content_stream_headers(mocker):
+    mocker.patch("httpx._content_streams.ContentStream.get_headers")
+
+
+@pytest.fixture
+def mock_httpx_encode(mocker):
+    mocker.patch("httpx._models.encode")
+
+
+@pytest.fixture
+def mock_open_file(mocker):
+    mocker.patch("builtins.open", return_value="my/fake/path")
+
+
+@pytest.fixture
+def expected_upload_test_response():
+    return {
+        "automation_session": {
+            "name": "Pyppium - Test",
+            "duration": None,
+            "os": "android",
+            "os_version": "9.0",
+            "browser_version": "app",
+            "browser": None,
+            "device": "Samsung Galaxy A10",
+            "status": "passed",
+            "hashed_id": "f3069db4f92225471e4926e28563a08f63a48674",
+            "reason": "No reason, its just a test!",
+            "build_name": "Pyppium - Test",
+            "project_name": "Pyppium - Test",
+        }
+    }
+
+
+@pytest.fixture
 def expected_user_configuration():
     return {
         "driver": {

@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '136051286'
+      content-type:
+      - multipart/form-data; boundary=e4205df743e1499bba604ceab94cd9b5
+      host:
+      - api-cloud.browserstack.com
+      user-agent:
+      - python-httpx/0.14.3
+    method: POST
+    uri: https://api-cloud.browserstack.com/app-automate/upload
+  response:
+    content: '{"app_url":"bs://355e6259172efcdd09c49bae90d7f464e8ca2036"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Cache-Control, Content-Type, Access-Control-Allow-Headers, Authorization,
+        X-Requested-With, username, token, uploadIdentifier, userId
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-cache
+      connection:
+      - keep-alive
+      content-length:
+      - '59'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 03 Sep 2020 21:42:33 GMT
+      server:
+      - nginx
+      x-build-extension:
+      - .ipa
+      x-build-framework:
+      - ''
+      x-build-mode:
+      - '0'
+      x-build-os:
+      - ios
+      x-build-product:
+      - app_automate
+      x-powered-by:
+      - Express
+      x-request-identifier:
+      - 3bd6867aaca2a3c0a684a00a74dfb46a480a112c
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

@@ -51,4 +51,3 @@ def test_should_connect_to_browserstack(mock_remote_connection):
     driver.PyppiumDriver(caps={}, use_browserstack=True, user="", keys="")
     result = driver.PyppiumDriver.quit()
     assert_that(result).is_none()
-
