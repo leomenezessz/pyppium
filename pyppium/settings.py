@@ -3,7 +3,7 @@ from os.path import abspath
 import yaml
 from pyppium.exception import InvalidSettingsException
 
-PYPPIUM_CONFIG_PATH = abspath('pyppium.yaml')
+PYPPIUM_CONFIG_PATH = abspath("pyppium.yaml")
 
 config = {
     "driver": {
@@ -22,8 +22,3 @@ if os.path.exists(PYPPIUM_CONFIG_PATH):
                 config["driver"].update(user_conf["driver"])
         except Exception as error:
             raise InvalidSettingsException(error)
-
-
-
-
-

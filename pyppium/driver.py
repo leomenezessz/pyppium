@@ -1,3 +1,5 @@
+from os import environ
+
 from appium import webdriver
 from pyppium import exception
 from pyppium.settings import config
@@ -19,10 +21,20 @@ class PyppiumDriver(object):
         if caps is None:
             raise exception.CapabilitiesNoneException("Capabilities cannot be None!")
 
-        if "keys" in kwargs and "user" in kwargs and use_browserstack:
+        if use_browserstack:
+            user = (
+                environ["BROWSERSTACK_USERNAME"]
+                if "user" not in kwargs
+                else kwargs["user"]
+            )
+            keys = (
+                environ["BROWSERSTACK_ACCESS_KEY"]
+                if "keys" not in kwargs
+                else kwargs["keys"]
+            )
+
             _driver = webdriver.Remote(
-                f"http://{kwargs['user']}:{kwargs['keys']}{config['driver']['browserstack_url']}",
-                caps,
+                f"http://{user}:{keys}{config['driver']['browserstack_url']}", caps,
             )
             return
 
