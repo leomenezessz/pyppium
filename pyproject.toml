@@ -34,7 +34,7 @@ loguru = "==0.5.1"
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 assertpy = "==1.0"
-black = "==19.10b0"
+black = "^19.10b0"
 pytest-mock = "==3.2.0"
 pytest-cov= "==2.10.0"
 codecov = "==2.1.7"

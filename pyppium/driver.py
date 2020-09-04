@@ -34,7 +34,8 @@ class PyppiumDriver(object):
             )
 
             _driver = webdriver.Remote(
-                f"http://{user}:{keys}{config['driver']['browserstack_url']}", caps,
+                f"http://{user}:{keys}{config['driver']['browserstack_url']}",
+                caps,
             )
             return
 

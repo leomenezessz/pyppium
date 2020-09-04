@@ -28,7 +28,10 @@ class BrowserStackApi:
         }
 
         return httpx.post(
-            self._UPLOAD, files=files, auth=(self.user, self.password), timeout=None,
+            self._UPLOAD,
+            files=files,
+            auth=(self.user, self.password),
+            timeout=None,
         )
 
     @log.response()
@@ -38,13 +41,15 @@ class BrowserStackApi:
     @log.response()
     def delete_app(self, app_id):
         return httpx.delete(
-            f"{self._DELETE_APP}{app_id}", auth=(self.user, self.password),
+            f"{self._DELETE_APP}{app_id}",
+            auth=(self.user, self.password),
         )
 
     @log.response()
     def get_apps_by_custom_id(self, custom_id):
         return httpx.get(
-            f"{self._RECENT_APPS}{custom_id}", auth=(self.user, self.password),
+            f"{self._RECENT_APPS}{custom_id}",
+            auth=(self.user, self.password),
         )
 
     @log.response()
