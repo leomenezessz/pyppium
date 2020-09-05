@@ -39,7 +39,9 @@ def test_wait_presence_of_element(mocker, mock_selenium_wait, mock_pyppium_insta
 
 
 @pytest.mark.unity
-def test_wait_invisibility_of_element(mocker, mock_selenium_wait, mock_pyppium_instance):
+def test_wait_invisibility_of_element(
+    mocker, mock_selenium_wait, mock_pyppium_instance
+):
     spy = mocker.spy(condition, "wait_invisibility_of_element")
     elements = condition.wait_invisibility_of_element(By.ID, "button", 10)
     spy.assert_called_once_with(By.ID, "button", 10)
@@ -47,7 +49,9 @@ def test_wait_invisibility_of_element(mocker, mock_selenium_wait, mock_pyppium_i
 
 
 @pytest.mark.unity
-def test_wait_element_to_be_clickable(mocker, mock_selenium_wait, mock_pyppium_instance):
+def test_wait_element_to_be_clickable(
+    mocker, mock_selenium_wait, mock_pyppium_instance
+):
     spy = mocker.spy(condition, "wait_element_to_be_clickable")
     elements = condition.wait_element_to_be_clickable(By.ID, "button", 10)
     spy.assert_called_once_with(By.ID, "button", 10)

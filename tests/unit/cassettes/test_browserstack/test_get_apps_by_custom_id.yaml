@@ -1,0 +1,58 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api-cloud.browserstack.com
+      user-agent:
+      - python-httpx/0.14.3
+    method: GET
+    uri: https://api-cloud.browserstack.com/app-automate/recent_apps/android
+  response:
+    content: '[{"app_name":"my-app.ipa","app_version":"4.23.0","app_url":"bs://8cda444d6390db17b0a144be79be9ed996406dbc","app_id":"8cda444d6390db17b0a144be79be9ed996406dbc","uploaded_at":"2020-09-03
+      21:40:28 UTC","custom_id":"android","shareable_id":"pyppium-user/android"},{"app_name":"app-debug.apk","app_version":"4.22.1.DEBUG","app_url":"bs://a612326e283606fff64629f35a0ccc822a296222","app_id":"a612326e283606fff64629f35a0ccc822a296222","uploaded_at":"2020-09-03
+      21:05:00 UTC","custom_id":"android","shareable_id":"pyppium-user/android"},{"app_name":"app-debug.apk","app_version":"4.23.DEBUG","app_url":"bs://dd1ea772e834b05a09579f01142545846ecf4637","app_id":"dd1ea772e834b05a09579f01142545846ecf4637","uploaded_at":"2020-08-25
+      16:05:23 UTC","custom_id":"android","shareable_id":"pyppium-user/android"},{"app_name":"app-debug.apk","app_version":"4.22.1.DEBUG","app_url":"bs://a71bf7affb25de15ad91ce0a21a269daadeea985","app_id":"a71bf7affb25de15ad91ce0a21a269daadeea985","uploaded_at":"2020-08-14
+      14:40:21 UTC","custom_id":"android","shareable_id":"pyppium-user/android"},{"app_name":"app-debug.apk","app_version":"4.22.DEBUG","app_url":"bs://0cfe73322a318b3c6a02163851107346032e6f39","app_id":"0cfe73322a318b3c6a02163851107346032e6f39","uploaded_at":"2020-08-12
+      15:55:19 UTC","custom_id":"android","shareable_id":"pyppium-user/android"}]'
+    headers:
+      cache-control:
+      - max-age=0, private, must-revalidate
+      connection:
+      - keep-alive
+      content-length:
+      - '1380'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 03 Sep 2020 21:52:34 GMT
+      etag:
+      - '"e2125d24bf96b11f1d0e66ef50be8190"'
+      server:
+      - nginx
+      set-cookie:
+      - tracking_id=ee3cb154-026e-47f0-9996-7aa6197a5e32; domain=.browserstack.com;
+        path=/; expires=Wed, 03 Sep 2025 21:52:34 -0000
+      status:
+      - 200 OK
+      vary:
+      - Origin
+      x-frame-options:
+      - SAMEORIGIN
+      x-powered-by:
+      - Phusion Passenger
+      x-request-id:
+      - 0daf3525-da32-4699-ab6d-24eb0f6f4186
+      x-runtime:
+      - '0.032920'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

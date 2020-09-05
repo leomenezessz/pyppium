@@ -1,0 +1,55 @@
+interactions:
+- request:
+    body: status=passed&reason=No+reason%2C+its+just+a+test%21
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '52'
+      content-type:
+      - application/x-www-form-urlencoded
+      host:
+      - api-cloud.browserstack.com
+      user-agent:
+      - python-httpx/0.14.3
+    method: PUT
+    uri: https://api-cloud.browserstack.com/app-automate/sessions/f3069db4f92225471e4926e28563a08f63a48674.json
+  response:
+    content: '{"automation_session":{"name":"Pyppium - Test","duration":null,"os":"android","os_version":"9.0","browser_version":"app","browser":null,"device":"Samsung
+      Galaxy A10","status":"passed","hashed_id":"f3069db4f92225471e4926e28563a08f63a48674","reason":"No
+      reason, its just a test!","build_name":"Pyppium - Test","project_name":"Pyppium
+      - Test"}}'
+    headers:
+      cache-control:
+      - max-age=0, private, must-revalidate
+      connection:
+      - keep-alive
+      content-length:
+      - '341'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 03 Sep 2020 22:19:49 GMT
+      etag:
+      - '"2a8b79ce49e5cb7e115d9b0b7455692e"'
+      server:
+      - nginx
+      status:
+      - 200 OK
+      vary:
+      - Origin
+      x-powered-by:
+      - Phusion Passenger
+      x-request-id:
+      - c5dfe756-49ec-4df7-9c86-ed5f030485ae
+      x-runtime:
+      - '0.197798'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

@@ -118,12 +118,28 @@ You can connect pyppium with BrowserStack like this.
 ````python
 PyppiumDriver(caps, user="meiko", keys="keys", use_browserstack=True)
 ````
+Or you can use environment variables.
+
+```
+
+export BROWSERSTACK_USERNAME=my-user
+export BROWSERSTACK_ACCESS_KEY=my-keys
+
+```
+
+And you don't need to use user and keys parameters anymore.
+
+````python
+PyppiumDriver(caps, use_browserstack=True)
+````
 
 Change between local appium and BrowserStack is easy, just changing the flag `#!python False`.
 
 ````python
 PyppiumDriver(caps, user="meiko", keys="keys", use_browserstack=False)
 ````
+
+
 
 !!! Warning
     Remember! BrowserStack have specific capabilities, you can check this in [Browserstack official documentation](https://www.browserstack.com/app-automate/capabilities). 

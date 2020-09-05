@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api-cloud.browserstack.com
+      user-agent:
+      - python-httpx/0.14.3
+    method: GET
+    uri: https://api-cloud.browserstack.com/app-automate/recent_apps/
+  response:
+    content: '[{"app_name":"my-app.ipa","app_version":"4.23.0","app_url":"bs://355e6259172efcdd09c49bae90d7f464e8ca2036","app_id":"355e6259172efcdd09c49bae90d7f464e8ca2036","uploaded_at":"2020-09-03
+      21:42:33 UTC"},{"app_name":"app-debug.apk","app_version":"4.22.1.DEBUG","app_url":"bs://0fb5cfaa3250f666365ab4e812de002bd1ef69ee","app_id":"0fb5cfaa3250f666365ab4e812de002bd1ef69ee","uploaded_at":"2020-09-03
+      21:07:29 UTC"},{"app_name":"app-debug.apk","app_version":"4.22.1.DEBUG","app_url":"bs://a612326e283606fff64629f35a0ccc822a296222","app_id":"a612326e283606fff64629f35a0ccc822a296222","uploaded_at":"2020-09-03
+      21:05:00 UTC","custom_id":"android","shareable_id":"pyppium-user/android"},{"app_name":"my-app.ipa","app_version":"4.23.0","app_url":"bs://4a57c058306e3c514b1f683a3bb3ffae6323322b","app_id":"4a57c058306e3c514b1f683a3bb3ffae6323322b","uploaded_at":"2020-08-25
+      16:52:43 UTC","custom_id":"ios","shareable_id":"pyppium-user/ios"},{"app_name":"app-debug.apk","app_version":"4.23.DEBUG","app_url":"bs://dd1ea772e834b05a09579f01142545846ecf4637","app_id":"dd1ea772e834b05a09579f01142545846ecf4637","uploaded_at":"2020-08-25
+      16:05:23 UTC","custom_id":"android","shareable_id":"pyppium-user/android"},{"app_name":"app-debug.apk","app_version":"4.17.DEBUG","app_url":"bs://294d651a7bfcb01da57f7cf75bcbfd52663cb1db","app_id":"294d651a7bfcb01da57f7cf75bcbfd52663cb1db","uploaded_at":"2020-08-20
+      19:46:44 UTC","custom_id":"android","shareable_id":"pyppium-user/android"},{"app_name":"ios.ipa","app_version":"4.22.0","app_url":"bs://a9ff7eaa92b6c6b54403204754b526be4055e96b","app_id":"a9ff7eaa92b6c6b54403204754b526be4055e96b","uploaded_at":"2020-08-18
+      14:14:41 UTC","custom_id":"ios","shareable_id":"pyppium-user/ios"},{"app_name":"app-debug.apk","app_version":"4.22.1.DEBUG","app_url":"bs://a71bf7affb25de15ad91ce0a21a269daadeea985","app_id":"a71bf7affb25de15ad91ce0a21a269daadeea985","uploaded_at":"2020-08-14
+      14:40:21 UTC","custom_id":"android","shareable_id":"pyppium-user/android"},{"app_name":"app-debug.apk","app_version":"4.22.DEBUG","app_url":"bs://0cfe73322a318b3c6a02163851107346032e6f39","app_id":"0cfe73322a318b3c6a02163851107346032e6f39","uploaded_at":"2020-08-12
+      15:55:19 UTC","custom_id":"android","shareable_id":"pyppium-user/android"},{"app_name":"app-debug.apk","app_version":"4.21.1.DEBUG","app_url":"bs://ef717b8077229555efc153bcf61aa9e6c1c875e1","app_id":"ef717b8077229555efc153bcf61aa9e6c1c875e1","uploaded_at":"2020-08-03
+      19:24:44 UTC","custom_id":"android","shareable_id":"pyppium-user/android"}]'
+    headers:
+      cache-control:
+      - max-age=0, private, must-revalidate
+      connection:
+      - keep-alive
+      content-length:
+      - '2614'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 03 Sep 2020 22:08:34 GMT
+      etag:
+      - '"2cacf99a374736cede6b4f59c3ea19cd"'
+      server:
+      - nginx
+      set-cookie:
+      - tracking_id=db9c5c93-736f-4f9b-87f5-73b6d78de0b5; domain=.browserstack.com;
+        path=/; expires=Wed, 03 Sep 2025 22:08:34 -0000
+      status:
+      - 200 OK
+      vary:
+      - Origin
+      x-frame-options:
+      - SAMEORIGIN
+      x-powered-by:
+      - Phusion Passenger
+      x-request-id:
+      - 4e794688-d26c-4cd0-8cfe-44a0841edb43
+      x-runtime:
+      - '0.048046'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

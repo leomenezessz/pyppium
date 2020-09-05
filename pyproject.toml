@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyppium"
-version = "0.4.1"
+version = "0.5.1"
 description = "Pyppium is a wrapper of Appium-Python-Client for cross mobile testing."
 authors = ["Leonardo Menezes <leonardosmenezes.ssz@gmail.com>"]
 repository = "https://github.com/leomenezessz/pyppium"
@@ -27,12 +27,14 @@ packages = [
 python = "^3.7"
 Appium-Python-Client="==1.0.2"
 PyYAML = "==5.3.1"
+httpx = "==0.14.3"
+loguru = "==0.5.1"
 
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 assertpy = "==1.0"
-black = "==19.10b0"
+black = "^19.10b0"
 pytest-mock = "==3.2.0"
 pytest-cov= "==2.10.0"
 codecov = "==2.1.7"
@@ -40,6 +42,10 @@ mkdocs = "==1.1.2"
 tox = "==3.17.1"
 tox-gh-actions = "==0.1.1"
 mkdocs-material = "==5.4.0"
+pytest-recording = "==0.9.0"
+
+
+
 
 
 [build-system]

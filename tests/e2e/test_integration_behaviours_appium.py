@@ -32,5 +32,3 @@ def test_android_basic_behaviours(capabilities, username, password):
     screen.fill_password(password)
     screen.click_button_sign_in()
     assert_that(WelcomeScreen().label_welcome_message()).contains(username)
-
-

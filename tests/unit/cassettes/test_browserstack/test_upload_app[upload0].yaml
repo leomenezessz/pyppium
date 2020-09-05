@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '136051294'
+      content-type:
+      - multipart/form-data; boundary=b727dd290556981f5edc36d92c60c241
+      host:
+      - api-cloud.browserstack.com
+      user-agent:
+      - python-httpx/0.14.3
+    method: POST
+    uri: https://api-cloud.browserstack.com/app-automate/upload
+  response:
+    content: '{"app_url":"bs://8cda444d6390db17b0a144be79be9ed996406dbc","custom_id":"android","shareable_id":"pyppium-user/android"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Cache-Control, Content-Type, Access-Control-Allow-Headers, Authorization,
+        X-Requested-With, username, token, uploadIdentifier, userId
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-cache
+      connection:
+      - keep-alive
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 03 Sep 2020 21:40:28 GMT
+      server:
+      - nginx
+      transfer-encoding:
+      - chunked
+      x-build-extension:
+      - .ipa
+      x-build-framework:
+      - ''
+      x-build-mode:
+      - '0'
+      x-build-os:
+      - ios
+      x-build-product:
+      - app_automate
+      x-powered-by:
+      - Express
+      x-request-identifier:
+      - 305b674aba5870fcf1d3a125c7edfd3bdf1297ed
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
