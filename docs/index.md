@@ -39,7 +39,8 @@ With Pyppium you will see:
  - [Codecov](https://pypi.org/project/codecov/)
  - [Mkdocs](https://pypi.org/project/mkdocs/)
  - [Tox](https://pypi.org/project/tox/) 
- - [Mkdocs-material](https://squidfunk.github.io/mkdocs-material/)  
+ - [Mkdocs-material](https://squidfunk.github.io/mkdocs-material/) 
+ - [Httpx](https://www.python-httpx.org/)  
  
  
 ## License

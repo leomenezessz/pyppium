@@ -5,7 +5,9 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/leomenezessz/pyppium/blob/master/LICENSE)
 ![GitHub Pages Deploy](https://github.com/leomenezessz/pyppium/workflows/GitHub%20Pages%20Deploy/badge.svg?branch=master)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-
+[![PyPI version](https://badge.fury.io/py/pyppium.svg)](https://badge.fury.io/py/pyppium)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/pyppium)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyppium)
 
 Pyppium is an Appium-Python-Client wrapper for cross mobile testing. It helps you to save your time by reducing complexity, increasing efficiency 
 and also avoiding these boring and repetitive work problems. Assists you to focus on what really matters, like your business rules, and provides an
@@ -103,6 +105,8 @@ $ tox
  - [Mkdocs](https://pypi.org/project/mkdocs/)
  - [Tox](https://pypi.org/project/tox/) 
  - [Mkdocs-material](https://squidfunk.github.io/mkdocs-material/) 
+ - [Httpx](https://www.python-httpx.org/) 
+ 
 
 ## License
 
