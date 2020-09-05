@@ -18,14 +18,14 @@ caps_ios = {
     "platformName": "iOS",
     "automationName": "xcuitest",
     "deviceName": "iPhone 8",
-    "platformVersion": "13.3",
+    "platformVersion": "13.6",
     "app": abspath("tests/e2e/apps/dummy.app"),
 }
 
 
 @pytest.mark.regression
 @pytest.mark.parametrize("capabilities", [caps_android, caps_ios])
-def test_android_basic_behaviours(capabilities, username, password):
+def test_pyppium_basic_behaviours(capabilities, username, password):
     PyppiumDriver(capabilities)
     screen = LoginScreen()
     screen.fill_email(username)
