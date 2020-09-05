@@ -1,0 +1,779 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>Pyppium Driver - Pyppium</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.6a5ad368.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e56c2">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pyppium-driver" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Pyppium" class="md-header-nav__button md-logo" aria-label="Pyppium">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Pyppium
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Pyppium Driver
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/leomenezessz/pyppium/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Pyppium" class="md-nav__button md-logo" aria-label="Pyppium">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Pyppium
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/leomenezessz/pyppium/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Welcome to Pyppium!" class="md-nav__link">
+      Welcome to Pyppium!
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started/" title="QuickStart" class="md-nav__link">
+      QuickStart
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Pyppium Driver
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Pyppium Driver" class="md-nav__link md-nav__link--active">
+      Pyppium Driver
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#driver-basics" class="md-nav__link">
+    Driver Basics
+  </a>
+  
+    <nav class="md-nav" aria-label="Driver Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-appium-default-url" class="md-nav__link">
+    Connect to Appium Default Url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-default-appium-url" class="md-nav__link">
+    Override Default Appium Url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#driver-instance" class="md-nav__link">
+    Driver Instance
+  </a>
+  
+    <nav class="md-nav" aria-label="Driver Instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screenshot" class="md-nav__link">
+    Screenshot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-presence-of-keyboard" class="md-nav__link">
+    Checking Presence of Keyboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    Session
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-plataform-name" class="md-nav__link">
+    Getting Plataform Name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-running-platform" class="md-nav__link">
+    Checking Running Platform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quitting-driver" class="md-nav__link">
+    Quitting Driver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyppiumdriver-and-browserstack" class="md-nav__link">
+    PyppiumDriver and Browserstack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-real-life-sample" class="md-nav__link">
+    Pytest Real Life Sample
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fetcher/" title="Fecther" class="md-nav__link">
+      Fecther
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../decorators/" title="Decorators" class="md-nav__link">
+      Decorators
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../browserstack/" title="Browserstack" class="md-nav__link">
+      Browserstack
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../settings/" title="Settings" class="md-nav__link">
+      Settings
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#driver-basics" class="md-nav__link">
+    Driver Basics
+  </a>
+  
+    <nav class="md-nav" aria-label="Driver Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-appium-default-url" class="md-nav__link">
+    Connect to Appium Default Url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-default-appium-url" class="md-nav__link">
+    Override Default Appium Url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#driver-instance" class="md-nav__link">
+    Driver Instance
+  </a>
+  
+    <nav class="md-nav" aria-label="Driver Instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screenshot" class="md-nav__link">
+    Screenshot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-presence-of-keyboard" class="md-nav__link">
+    Checking Presence of Keyboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    Session
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-plataform-name" class="md-nav__link">
+    Getting Plataform Name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-running-platform" class="md-nav__link">
+    Checking Running Platform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quitting-driver" class="md-nav__link">
+    Quitting Driver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyppiumdriver-and-browserstack" class="md-nav__link">
+    PyppiumDriver and Browserstack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-real-life-sample" class="md-nav__link">
+    Pytest Real Life Sample
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/leomenezessz/pyppium/edit/master/docs/pyppium-driver.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="pyppium-driver">Pyppium Driver</h1>
+<p>The Pyppium driver is an abstraction to the conventional driver. He tries to simplify the driver usage and sharing instance in your test runner.</p>
+<h2 id="driver-basics">Driver Basics</h2>
+<p>Pyppium driver has some facilities to use, and have some default parameters to simplify your tests. After start using the Pyppium remember to import it.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyppium.driver</span> <span class="kn">import</span> <span class="n">PyppiumDriver</span>
+</code></pre></div>
+
+
+<h3 id="connect-to-appium-default-url">Connect to Appium Default Url</h3>
+<p>If the Pyppium driver starts only, it will connect to <code>"http://localhost:4723/wd/hub"</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Pyppium</span><span class="p">(</span><span class="n">caps</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can read more about appium capabilities in this <a href="http://appium.io/docs/en/writing-running-appium/caps/">Appium official documentation</a>.</p>
+</div>
+<h3 id="override-default-appium-url">Override Default Appium Url</h3>
+<p>You can override the Appium default URL.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Pyppium</span><span class="p">(</span><span class="s2">&quot;http://my-domain/wd/hub&quot;</span><span class="p">,</span> <span class="n">caps</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h3 id="driver-instance">Driver Instance</h3>
+<p>After creating your driver instance you can access like that.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Pyppium</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>This   <code class="highlight"><span class="n">instance</span><span class="p">()</span></code> call return a <code class="highlight"><span class="n">webdriver</span><span class="o">.</span><span class="n">Remote</span></code>. You can access attributes and functions as usual.</p>
+<h4 id="screenshot">Screenshot</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">PyppiumDriver</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">get_screenshot_as_png</span><span class="p">()</span>
+</code></pre></div>
+
+
+<h4 id="checking-presence-of-keyboard">Checking Presence of Keyboard</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">PyppiumDriver</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">is_keyboard_shown</span><span class="p">()</span>
+</code></pre></div>
+
+
+<h4 id="session">Session</h4>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Return session</span>
+
+<span class="n">PyppiumDriver</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">session</span>
+
+<span class="c1"># Return session_id</span>
+
+<span class="n">PyppiumDriver</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">session_id</span>
+</code></pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All these commands are from <code class="highlight"><span class="n">webdriver</span><span class="o">.</span><span class="n">Remote</span></code>, for more hot moves, see <a href="https://selenium-python.readthedocs.io/api.html">selenium official documentation</a>.</p>
+</div>
+<h2 id="getting-plataform-name">Getting Plataform Name</h2>
+<p>You can show the running platform name simple like that.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyppium</span> <span class="kn">import</span> <span class="n">driver</span>
+
+<span class="c1"># Will return the name of the platform in lower case.</span>
+<span class="c1"># android or ios</span>
+
+<span class="n">driver</span><span class="o">.</span><span class="n">platform_name</span><span class="p">()</span>
+</code></pre></div>
+
+
+<h2 id="checking-running-platform">Checking Running Platform</h2>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyppium</span> <span class="kn">import</span> <span class="n">driver</span>
+
+<span class="n">driver</span><span class="o">.</span><span class="n">is_android</span><span class="p">()</span>
+
+<span class="c1"># Or </span>
+
+<span class="n">driver</span><span class="o">.</span><span class="n">is_ios</span><span class="p">()</span>
+</code></pre></div>
+
+
+<h2 id="quitting-driver">Quitting Driver</h2>
+<p>Before killing the driver instance pyppium only check if the driver instance is not <code class="highlight"><span class="kc">None</span></code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">PyppiumDriver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</code></pre></div>
+
+
+<h2 id="pyppiumdriver-and-browserstack">PyppiumDriver and Browserstack</h2>
+<p>You can connect pyppium with BrowserStack like this.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">PyppiumDriver</span><span class="p">(</span><span class="n">caps</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s2">&quot;meiko&quot;</span><span class="p">,</span> <span class="n">keys</span><span class="o">=</span><span class="s2">&quot;keys&quot;</span><span class="p">,</span> <span class="n">use_browserstack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Or you can use environment variables.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">export BROWSERSTACK_USERNAME=my-user</span>
+<span class="err">export BROWSERSTACK_ACCESS_KEY=my-keys</span>
+</code></pre></div>
+
+
+<p>And you don't need to use user and keys parameters anymore.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">PyppiumDriver</span><span class="p">(</span><span class="n">caps</span><span class="p">,</span> <span class="n">use_browserstack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Change between local appium and BrowserStack is easy, just changing the flag <code class="highlight"><span class="kc">False</span></code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">PyppiumDriver</span><span class="p">(</span><span class="n">caps</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s2">&quot;meiko&quot;</span><span class="p">,</span> <span class="n">keys</span><span class="o">=</span><span class="s2">&quot;keys&quot;</span><span class="p">,</span> <span class="n">use_browserstack</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Remember! BrowserStack have specific capabilities, you can check this in <a href="https://www.browserstack.com/app-automate/capabilities">Browserstack official documentation</a>. </p>
+</div>
+<h2 id="pytest-real-life-sample">Pytest Real Life Sample</h2>
+<p>If your application has the same behaviours, you can easily run a test for android and ios with only one test.</p>
+<p>First, create your capabilities for android and ios.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Android appium capabilities</span>
+
+<span class="n">caps_android</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;platformName&quot;</span><span class="p">:</span> <span class="s2">&quot;Android&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;automationName&quot;</span><span class="p">:</span> <span class="s2">&quot;uiautomator2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;deviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;Android Emulator&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;appPackage&quot;</span><span class="p">:</span> <span class="s2">&quot;com.example.dummy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;appActivity&quot;</span><span class="p">:</span> <span class="s2">&quot;MainActivity&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;newCommandTimeout&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;app&quot;</span><span class="p">:</span> <span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;tests/e2e/apps/app-debug.apk&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># iOS appium capabilities</span>
+
+<span class="n">caps_ios</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;platformName&quot;</span><span class="p">:</span> <span class="s2">&quot;iOS&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;automationName&quot;</span><span class="p">:</span> <span class="s2">&quot;xcuitest&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;deviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;iPhone 8&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;platformVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;13.6&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;app&quot;</span><span class="p">:</span> <span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;tests/e2e/apps/dummy.app&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Create your test case using parametrize and happy testing.</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;capabilities&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">caps_ios</span><span class="p">,</span> <span class="n">caps_android</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">test_should_show_welcome_message</span><span class="p">(</span><span class="n">capabilities</span><span class="p">):</span>
+    <span class="n">PyppiumDriver</span><span class="p">(</span><span class="n">capabilities</span><span class="p">)</span>
+
+    <span class="c1"># You screens stuff...</span>
+
+    <span class="n">PyppiumDriver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</code></pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Remember to create your screen using pyppium <a href="" title="https://leomenezessz.github.io/pyppium/fetcher/">fetcher</a>.</p>
+</div>
+<p><br/></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../getting-started/" title="QuickStart" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                QuickStart
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../fetcher/" title="Fecther" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Fecther
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
