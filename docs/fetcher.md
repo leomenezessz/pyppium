@@ -113,6 +113,9 @@ Have some possibilities of wait in the condition module below have the condition
 
     * `#!python condition.VISIBILITY:` Wait for an element to be visible.
     * `#!python condition.PRESENCE:` Wait for the presence of the element.
+    * `#!python condition.INVISIBILITY:` Wait for an element to be invisible.
+    * `#!python condition.CLICKABLE:` Wait for an element to be clickable.
+    
 
 === "fetches"
 
